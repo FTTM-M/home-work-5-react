@@ -5,11 +5,15 @@ export default function weather() {
   return (
     <div className="weather">
       {" "}
-      <from>
-        <div className="row">
-          <div className="col-6">
+      <form>
+        <div className="formMargin row">
+          <div className="col-9">
             {" "}
-            <input type="search" placeholder="Enter a city..."></input>
+            <input
+              className="search"
+              type="search"
+              placeholder="Enter a city..."
+            ></input>
           </div>
           <div className="col-3">
             <input
@@ -19,14 +23,25 @@ export default function weather() {
             ></input>
           </div>
         </div>
-      </from>
-      <div>
-        New york
-        <ul>
-          <li>Wednesday</li>
-          <li>Mostly Cloudy</li>
-        </ul>
-      </div>{" "}
+      </form>
+      <div className="row">
+        <div className="col-6">
+          <div className="theCity">
+            New york
+            <ul>
+              <li>Wednesday</li>
+              <li>Mostly Cloudy</li>
+            </ul>
+          </div>
+        </div>
+        <div className="col-6">
+          <ul>
+            <li>Precipitiation 15%</li>
+            <li>Humidity 72%</li>
+            <li>Wind 13 km/h</li>
+          </ul>
+        </div>
+      </div>
     </div>
   );
 }
