@@ -2,6 +2,8 @@
   background: rgb(193, 229, 234);
   border: 1px rgb(193, 229, 234) solid;
   border-radius: 40px;
+  color: rgb(14, 119, 133);
+  font-size: 15px;
 }
 .weather .btn-primary {
   color: rgb(14, 119, 133);
@@ -23,7 +25,6 @@ form {
 }
 .weather .theCity h1 {
   font-size: 35px;
-  color: rgb(14, 119, 133);
 }
 .weather .whole {
   margin-left: 30px;

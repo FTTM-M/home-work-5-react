@@ -33,6 +33,10 @@ export default function weather() {
               <ul>
                 <li>Wednesday</li>
                 <li>Mostly Cloudy</li>
+                <li>
+                  <img src=""></img>
+                </li>
+                <h1> 6°c</h1>
               </ul>
             </div>
           </div>
