@@ -47,13 +47,13 @@ form {
 }
 .weather .theCity .temp .degree {
   display: inline-block;
-  font-size: 38px;
+  font-size: 40px;
   margin: -5px 0px 0px 3px;
   font-weight: 600;
 }
 .weather .theCity .temp .celsius {
   display: flex;
-  margin: -70px 0px 0px 120px;
+  margin: -73px 0px 0px 120px;
 }
 .weather .description {
   font-weight: 500;
