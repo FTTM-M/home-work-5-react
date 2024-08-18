@@ -43,17 +43,17 @@ form {
 }
 .weather .theCity img {
   height: 75px;
-  margin-top: -20px;
+  margin-top: -15px;
 }
 .weather .theCity .temp .degree {
   display: inline-block;
   font-size: 38px;
-  margin: 5px 0px 0px 3px;
+  margin: -5px 0px 0px 3px;
   font-weight: 600;
 }
 .weather .theCity .temp .celsius {
   display: flex;
-  margin: -65px 0px 0px 102px;
+  margin: -70px 0px 0px 120px;
 }
 .weather .description {
   font-weight: 500;
