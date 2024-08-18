@@ -36,3 +36,18 @@ form {
   background: rgb(14, 119, 133);
   color: white;
 }
+
+.weather .theCity .temp {
+  margin-top: 20px;
+}
+.weather .theCity .temp .degree {
+  font-size: 38px;
+  font-weight: 600;
+}
+.weather .theCity .temp .celsius {
+  display: flex;
+  margin: -55px 0px 0px 103px;
+}
+.weather .description {
+  font-weight: 500;
+}

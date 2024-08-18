@@ -25,7 +25,7 @@ export default function weather() {
             </div>
           </div>
         </form>
-        <div className="row">
+        <div className="row  description">
           <div className="col-6">
             <div className="theCity">
               <h1> New york</h1>
@@ -33,10 +33,14 @@ export default function weather() {
               <ul>
                 <li>Wednesday</li>
                 <li>Mostly Cloudy</li>
-                <li>
-                  <img src=""></img>
-                </li>
-                <h1> 6°c</h1>
+                <div className="temp">
+                  <img
+                    src="https://www.accuweather.com/en/us/google/94043/current-weather/74907_poi"
+                    alt="weather"
+                  ></img>
+                  <span className="degree"> 6</span>
+                  <span className="celsius">°c </span>
+                </div>
               </ul>
             </div>
           </div>
