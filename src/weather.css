@@ -6,9 +6,9 @@
 .weather .btn-primary {
   color: rgb(14, 119, 133);
   background: rgb(253, 254, 254);
-  margin-left: -110px;
+  margin-left: -85px;
   border: none;
-  padding: 9px 15px;
+  padding: 8px 15px;
   border-radius: 30px;
 }
 form {
@@ -20,4 +20,18 @@ form {
   border-radius: 30px;
   border: none;
   max-width: 100%;
+}
+.weather .theCity h1 {
+  font-size: 35px;
+  color: rgb(14, 119, 133);
+}
+.weather .whole {
+  margin-left: 30px;
+}
+.weather .mt-5 {
+  margin-top: 100px !important;
+}
+.weather .btn-primary:hover {
+  background: rgb(14, 119, 133);
+  color: white;
 }
