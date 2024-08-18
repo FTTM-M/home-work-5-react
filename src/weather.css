@@ -28,6 +28,7 @@ form {
 }
 .weather .whole {
   margin-left: 30px;
+  margin-bottom: 40px;
 }
 .weather .mt-5 {
   margin-top: 100px !important;
@@ -40,13 +41,19 @@ form {
 .weather .theCity .temp {
   margin-top: 20px;
 }
+.weather .theCity img {
+  height: 75px;
+  margin-top: -20px;
+}
 .weather .theCity .temp .degree {
+  display: inline-block;
   font-size: 38px;
+  margin: 5px 0px 0px 3px;
   font-weight: 600;
 }
 .weather .theCity .temp .celsius {
   display: flex;
-  margin: -55px 0px 0px 103px;
+  margin: -65px 0px 0px 102px;
 }
 .weather .description {
   font-weight: 500;

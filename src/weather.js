@@ -35,10 +35,10 @@ export default function weather() {
                 <li>Mostly Cloudy</li>
                 <div className="temp">
                   <img
-                    src="https://www.accuweather.com/en/us/google/94043/current-weather/74907_poi"
+                    src="https://ssl.gstatic.com/onebox/weather/64/rain_light.png"
                     alt="weather"
                   ></img>
-                  <span className="degree"> 6</span>
+                  <span className="degree "> 6</span>
                   <span className="celsius">°c </span>
                 </div>
               </ul>
