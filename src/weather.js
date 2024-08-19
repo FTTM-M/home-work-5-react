@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import axios from "axios";
+import { RotatingLines } from "react-loader-spinner";
 import "./weather.css";
 
 export default function Weather(props) {
@@ -76,6 +77,20 @@ export default function Weather(props) {
       </div>
     );
   } else {
-    return "loading...";
+    return (
+      <div className="loader-container">
+        <RotatingLines
+          visible={true}
+          height="200"
+          width="200"
+          strokeColor="rgb(9, 96, 107)"
+          strokeWidth="5"
+          animationDuration="0.75"
+          ariaLabel="rotating-lines-loading"
+          wrapperStyle={{ display: "block" }}
+          wrapperClass=""
+        />
+      </div>
+    );
   }
 }
