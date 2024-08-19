@@ -3,12 +3,12 @@ import axios from "axios";
 import "./weather.css";
 
 export default function Weather() {
-  const [weatherData, setWeatherData] = useState({});
-  const [ready, setReady] = useState(false);
+  const [weatherData, setWeatherData] = useState({ ready: false });
 
   function HandleResponse(response) {
     console.log(response.data);
     setWeatherData({
+      ready: true,
       temperature: Math.round(response.data.temperature.current),
       city: response.data.city,
       description: response.data.condition.description,
@@ -17,8 +17,6 @@ export default function Weather() {
       alt: response.data.condition.icon,
       iconUrl: response.data.condition.icon_url,
     });
-
-    setReady(true);
   }
   let city = "New York";
   const apiKey = "7e0t14a370o3b9095a4ff16f06c1bee0";
@@ -26,7 +24,7 @@ export default function Weather() {
 
   axios.get(apiUrl).then(HandleResponse);
 
-  if (ready) {
+  if (weatherData.ready) {
     return (
       <div className="weather">
         {" "}
