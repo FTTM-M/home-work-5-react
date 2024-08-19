@@ -3,11 +3,21 @@ import axios from "axios";
 import "./weather.css";
 
 export default function Weather() {
-  const [temperature, setTemperature] = useState(null);
+  const [weatherData, setWeatherData] = useState({});
   const [ready, setReady] = useState(false);
 
   function HandleResponse(response) {
-    setTemperature(Math.round(response.data.temperature.current));
+    console.log(response.data);
+    setWeatherData({
+      temperature: Math.round(response.data.temperature.current),
+      city: response.data.city,
+      description: response.data.condition.description,
+      wind: response.data.wind.speed,
+      humidity: response.data.temperature.humidity,
+      alt: response.data.condition.icon,
+      iconUrl: response.data.condition.icon_url,
+    });
+
     setReady(true);
   }
   let city = "New York";
@@ -40,20 +50,17 @@ export default function Weather() {
               </div>
             </div>
           </form>
-          <div className="row  description">
+          <div className="row  descript">
             <div className="col-6">
               <div className="theCity">
-                <h1> New york</h1>
+                <h1>{weatherData.city}</h1>
 
                 <ul>
-                  <li>Wednesday</li>
-                  <li>Mostly Cloudy</li>
+                  <li>day</li>
+                  <li>{weatherData.description}</li>
                   <div className="temp">
-                    <img
-                      src="https://ssl.gstatic.com/onebox/weather/64/rain_light.png"
-                      alt="weather"
-                    ></img>
-                    <span className="degree "> {temperature}</span>
+                    <img src={weatherData.iconUrl} alt={weatherData.icon}></img>
+                    <span className="degree "> {weatherData.temperature}</span>
                     <span className="celsius">°c </span>
                   </div>
                 </ul>
@@ -61,9 +68,9 @@ export default function Weather() {
             </div>
             <div className="col-6 mt-5">
               <ul>
-                <li>Precipitiation 15%</li>
-                <li>Humidity 72%</li>
-                <li>Wind 13 km/h</li>
+                <li>Precipitiation: %</li>
+                <li>Humidity: {weatherData.humidity}%</li>
+                <li>Wind: {weatherData.wind} km/h</li>
               </ul>
             </div>
           </div>
