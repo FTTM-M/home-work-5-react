@@ -14,7 +14,7 @@
   border-radius: 30px;
 }
 form {
-  margin: 30px 60px 30px 40px;
+  margin: 40px 60px 30px 40px;
 }
 
 .search {
@@ -24,10 +24,13 @@ form {
   max-width: 100%;
 }
 .weather .theCity h1 {
-  font-size: 35px;
+  font-size: 30px;
+}
+.weather .theCity h1 {
+  color: rgb(9, 96, 107);
 }
 .weather .whole {
-  margin-left: 30px;
+  margin-left: 50px;
   margin-bottom: 40px;
 }
 .weather .mt-5 {
@@ -40,6 +43,7 @@ form {
 
 .weather .theCity .temp {
   margin-top: 20px;
+  margin-left: -30px;
 }
 .weather .theCity img {
   height: 75px;
@@ -50,14 +54,15 @@ form {
   font-size: 40px;
   margin: -5px 0px 0px 3px;
   font-weight: 600;
+  color: rgb(9, 96, 107);
 }
 .weather .theCity .temp .celsius {
   display: flex;
   margin: -73px 0px 0px 120px;
 }
-.weather .description {
+.weather .descript {
   font-weight: 500;
 }
-.weather .description ul li {
+.weather .descript ul li {
   list-style: none;
 }
