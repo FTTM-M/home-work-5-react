@@ -2,7 +2,7 @@
   background: rgb(193, 229, 234);
   border: 1px rgb(193, 229, 234) solid;
   border-radius: 40px;
-  color: rgb(14, 119, 133);
+  color: rgb(18, 143, 159);
   font-size: 15px;
 }
 .weather .btn-primary {
@@ -61,6 +61,7 @@ form {
 }
 .weather .descript {
   font-weight: 500;
+  font-size: 17px;
 }
 .weather .descript ul li {
   list-style: none;
