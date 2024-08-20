@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import axios from "axios";
+import ForDate from "./getdate";
 import { RotatingLines } from "react-loader-spinner";
 import "./weather.css";
 
@@ -10,6 +11,7 @@ export default function Weather(props) {
     console.log(response.data);
     setWeatherData({
       ready: true,
+      date: new Date(response.data.time * 1000),
       temperature: Math.round(response.data.temperature.current),
       city: response.data.city,
       description: response.data.condition.description,
@@ -28,7 +30,6 @@ export default function Weather(props) {
   if (weatherData.ready) {
     return (
       <div className="weather">
-        {" "}
         <div className="whole">
           <form>
             <div className="formMargin row">
@@ -55,7 +56,9 @@ export default function Weather(props) {
                 <h1>{weatherData.city}</h1>
 
                 <ul>
-                  <li>day</li>
+                  <li>
+                    <ForDate date={weatherData.date} />
+                  </li>
                   <li>{weatherData.description}</li>
                   <div className="temp">
                     <img src={weatherData.iconUrl} alt={weatherData.icon}></img>
@@ -67,7 +70,6 @@ export default function Weather(props) {
             </div>
             <div className="col-6 mt-5">
               <ul>
-                <li>Precipitiation: %</li>
                 <li>Humidity: {weatherData.humidity}%</li>
                 <li>Wind: {weatherData.wind} km/h</li>
               </ul>
