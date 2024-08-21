@@ -1,5 +1,6 @@
 import React from "react";
 import ForDate from "./getdate";
+import Icon from "./Icon";
 
 export default function Forsearch(props) {
   return (
@@ -14,7 +15,8 @@ export default function Forsearch(props) {
             </li>
             <li>{props.data.description}</li>
             <div className="temp">
-              <img src={props.data.iconUrl} alt={props.data.icon}></img>
+              <Icon spesific={props.data.iconUrl} />
+
               <span className="degree "> {props.data.temperature}</span>
               <span className="celsius">°c </span>
             </div>

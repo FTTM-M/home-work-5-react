@@ -30,7 +30,7 @@ form {
 
 .weather .whole {
   margin-left: 50px;
-  margin-bottom: 40px;
+  margin-bottom: 60px;
 }
 .weather .mt-5 {
   margin-top: 100px !important;
@@ -41,23 +41,23 @@ form {
 }
 
 .weather .theCity .temp {
-  margin-top: 20px;
+  margin-top: 4px;
   margin-left: -30px;
 }
-.weather .theCity img {
-  height: 75px;
-  margin-top: -15px;
+.weather .theCity .weathericon {
+  margin-top: 28px;
+  height: 70px;
 }
 .weather .theCity .temp .degree {
-  display: inline-block;
+  display: flex;
   font-size: 40px;
-  margin: -5px 0px 0px 3px;
+  margin: -70px 0px 0px 73px;
   font-weight: 600;
   color: rgb(9, 96, 107);
 }
 .weather .theCity .temp .celsius {
   display: flex;
-  margin: -73px 0px 0px 120px;
+  margin: -63px 0px 0px 115px;
 }
 .weather .descript {
   font-weight: 500;
