@@ -1,11 +1,13 @@
 import React, { useState } from "react";
 import axios from "axios";
-import ForDate from "./getdate";
+import Forsearch from "./Forsearch";
+
 import { RotatingLines } from "react-loader-spinner";
 import "./weather.css";
 
 export default function Weather(props) {
   const [weatherData, setWeatherData] = useState({ ready: false });
+  const [city, setCity] = useState(props.defaultCity);
 
   function HandleResponse(response) {
     console.log(response.data);
@@ -21,17 +23,26 @@ export default function Weather(props) {
       iconUrl: response.data.condition.icon_url,
     });
   }
+  function Handlesubmit(event) {
+    event.preventDefault();
+    SearchCity();
+  }
 
-  const apiKey = "7e0t14a370o3b9095a4ff16f06c1bee0";
-  let apiUrl = `https://api.shecodes.io/weather/v1/current?query=${props.defaultCity}&key=${apiKey}`;
+  function HandleForCity(event) {
+    setCity(event.target.value);
+  }
 
-  axios.get(apiUrl).then(HandleResponse);
+  function SearchCity() {
+    const apiKey = "7e0t14a370o3b9095a4ff16f06c1bee0";
+    let apiUrl = `https://api.shecodes.io/weather/v1/current?query=${city}&key=${apiKey}`;
+    axios.get(apiUrl).then(HandleResponse);
+  }
 
   if (weatherData.ready) {
     return (
       <div className="weather">
         <div className="whole">
-          <form>
+          <form onSubmit={Handlesubmit}>
             <div className="formMargin row">
               <div className="col-9">
                 {" "}
@@ -39,6 +50,7 @@ export default function Weather(props) {
                   className="search"
                   type="search"
                   placeholder="Enter a city..."
+                  onChange={HandleForCity}
                 ></input>
               </div>
               <div className="col-3">
@@ -50,35 +62,12 @@ export default function Weather(props) {
               </div>
             </div>
           </form>
-          <div className="row  descript">
-            <div className="col-6">
-              <div className="theCity">
-                <h1>{weatherData.city}</h1>
-
-                <ul>
-                  <li>
-                    <ForDate date={weatherData.date} />
-                  </li>
-                  <li>{weatherData.description}</li>
-                  <div className="temp">
-                    <img src={weatherData.iconUrl} alt={weatherData.icon}></img>
-                    <span className="degree "> {weatherData.temperature}</span>
-                    <span className="celsius">°c </span>
-                  </div>
-                </ul>
-              </div>
-            </div>
-            <div className="col-6 mt-5">
-              <ul>
-                <li>Humidity: {weatherData.humidity}%</li>
-                <li>Wind: {weatherData.wind} km/h</li>
-              </ul>
-            </div>
-          </div>
+          <Forsearch data={weatherData} />{" "}
         </div>
       </div>
     );
   } else {
+    SearchCity();
     return (
       <div className="loader-container">
         <RotatingLines
