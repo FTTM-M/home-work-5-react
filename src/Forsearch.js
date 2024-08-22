@@ -1,6 +1,7 @@
 import React from "react";
 import ForDate from "./getdate";
 import Icon from "./Icon";
+import Convert from "./convert";
 
 export default function Forsearch(props) {
   return (
@@ -16,9 +17,7 @@ export default function Forsearch(props) {
             <li>{props.data.description}</li>
             <div className="temp">
               <Icon spesific={props.data.iconUrl} />
-
-              <span className="degree "> {props.data.temperature}</span>
-              <span className="celsius">°c </span>
+              <Convert degreeoftemperature={props.data.temperature} />
             </div>
           </ul>
         </div>

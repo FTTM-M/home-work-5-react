@@ -57,8 +57,18 @@ form {
 }
 .weather .theCity .temp .celsius {
   display: flex;
-  margin: -63px 0px 0px 115px;
+  margin: -65px 0px 0px 120px;
 }
+
+.weather .theCity .temp .celsius .degreesign {
+  padding-right: 5px;
+  text-decoration: none;
+}
+.weather .theCity .temp .celsius .farenheitdegree {
+  padding-left: 5px;
+  text-decoration: none;
+}
+
 .weather .descript {
   font-weight: 500;
   font-size: 17px;
