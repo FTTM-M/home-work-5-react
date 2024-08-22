@@ -9,8 +9,10 @@ function App() {
         <Weather defaultCity="New York" />
       </div>
       <div className="footer">
-        coded by <a href="/">Fatemeh</a>, is open-sourced on{" "}
-        <a href="/">GitHub</a> and hosted on <a href="/">Netlify</a>
+        coded by <a href="https://github.com/FTTM-M">Fatemeh</a>, is
+        open-sourced on{" "}
+        <a href="https://github.com/FTTM-M/home-work-5-react">GitHub</a> and
+        hosted on <a href="https://www.netlify.com/">Netlify</a>
       </div>{" "}
     </div>
   );
