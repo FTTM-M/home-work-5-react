@@ -5,6 +5,7 @@
   color: rgb(18, 143, 159);
   font-size: 15px;
 }
+
 .weather .btn-primary {
   color: rgb(14, 119, 133);
   background: #ffffff;
@@ -86,4 +87,10 @@ form {
   top: 0;
   left: 0;
   background-color: rgba(255, 255, 255, 0.8);
+}
+@media (max-width: 770px) {
+  .weather .whole .search {
+    padding: 8px 5px 8px 5px;
+    text-align: center;
+  }
 }
