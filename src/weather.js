@@ -10,7 +10,7 @@ export default function Weather(props) {
   const [city, setCity] = useState(props.defaultCity);
 
   function HandleResponse(response) {
-    console.log(props.data.iconUrl);
+    console.log(response.data);
     setWeatherData({
       ready: true,
       date: new Date(response.data.time * 1000),
@@ -20,7 +20,7 @@ export default function Weather(props) {
       wind: response.data.wind.speed,
       humidity: response.data.temperature.humidity,
       alt: response.data.condition.icon,
-      iconUrl: response.data.condition.icon_url,
+      iconUrl: response.data.condition.icon,
     });
   }
   function Handlesubmit(event) {
