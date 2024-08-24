@@ -16,7 +16,7 @@ export default function Forsearch(props) {
             </li>
             <li>{props.data.description}</li>
             <div className="temp">
-              <Icon spesific={props.data.iconUrl} />
+              <Icon spesific={props.data.iconUrl} size={60} />
               <Convert degreeoftemperature={props.data.temperature} />
             </div>
           </ul>
