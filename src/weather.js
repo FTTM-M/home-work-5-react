@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import axios from "axios";
 import Forsearch from "./Forsearch";
+import Weatherforecast from "./Weatherforecast";
 
 import { RotatingLines } from "react-loader-spinner";
 import "./weather.css";
@@ -10,7 +11,6 @@ export default function Weather(props) {
   const [city, setCity] = useState(props.defaultCity);
 
   function HandleResponse(response) {
-    console.log(response.data);
     setWeatherData({
       ready: true,
       date: new Date(response.data.time * 1000),
@@ -62,7 +62,8 @@ export default function Weather(props) {
               </div>
             </div>
           </form>
-          <Forsearch data={weatherData} />{" "}
+          <Forsearch data={weatherData} />
+          <Weatherforecast date={weatherData} />
         </div>
       </div>
     );
