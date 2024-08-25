@@ -6,9 +6,9 @@ export default function Weatherforecast(props) {
   return (
     <div className="weatherforecast">
       <div className="weatherforecast-day">Tue</div>
-      <div className="iconforecast">
-        <Icon spesific={"clear-sky-day"} size={45} />
-      </div>
+
+      <Icon spesific={"clear-sky-day"} size={45} />
+
       <div className="weatherforecasr-temperature">
         <span className="weatherforecast-max">19</span>{" "}
         <span className="weatherforecast-min">10</span>
