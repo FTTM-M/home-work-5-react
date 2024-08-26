@@ -1,7 +1,8 @@
 import React, { useState } from "react";
-import Icon from "./Icon";
 import "./Weatherforecast.css";
 import axios from "axios";
+import Forecastdate from "./forecastdate";
+import Icon from "./Icon";
 
 export default function Weatherforecast(props) {
   let [forecastbeready, setForecastbeready] = useState(false);
@@ -15,14 +16,7 @@ export default function Weatherforecast(props) {
   if (forecastbeready) {
     return (
       <div className="weatherforecast">
-        <div className="weatherforecast-day">Tue</div>
-
-        <Icon spesific={"clear-sky-day"} size={45} />
-
-        <div className="weatherforecasr-temperature">
-          <span className="weatherforecast-max">19°</span>{" "}
-          <span className="weatherforecast-min">10°</span>
-        </div>
+        <Forecastdate data={forecastdetail} />
       </div>
     );
   } else {
