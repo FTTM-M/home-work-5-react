@@ -1,9 +1,10 @@
 .weatherforecast {
-  margin-top: 35px;
+  margin-top: 45px !important;
   text-align: center;
   font-size: 17px;
   font-weight: 500;
 }
+
 .weatherforecast .weatherforecast-day {
   margin-bottom: 10px;
 }
