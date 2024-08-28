@@ -1,5 +1,4 @@
 import React from "react";
-
 import Icon from "./Icon";
 
 export default function Forecastdate(props) {
@@ -18,7 +17,7 @@ export default function Forecastdate(props) {
 
       <Icon spesific={props.data.condition.icon} size={45} />
 
-      <div className="weatherforecast-temperature">
+      <div className="weatherforecasr-temperature">
         <span className="weatherforecast-max">{maxtemp()}°</span>{" "}
         <span className="weatherforecast-min">{mintemp()}°</span>
       </div>
