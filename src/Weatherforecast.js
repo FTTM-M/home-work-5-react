@@ -6,9 +6,8 @@ import Forecastdate from "./forecastdate";
 export default function Weatherforecast(props) {
   let [forecastbeready, setForecastbeready] = useState(false);
   let [forecastdetail, setforecastdetail] = useState(null);
-  function handleResponse(response) {
-    console.log(response.data);
 
+  function handleResponse(response) {
     setForecastbeready(true);
     setforecastdetail(response.data.daily);
   }
@@ -16,15 +15,17 @@ export default function Weatherforecast(props) {
   if (forecastbeready) {
     return (
       <div className="weatherforecast">
-        <Forecastdate data={forecastdetail[0]} />
+        <Forecastdate forecastdata={forecastdetail[0]} />
       </div>
     );
   } else {
+    const apiKey = "7e0t14a370o3b9095a4ff16f06c1bee0";
     let lat = props.coordinates.latitude;
     let lon = props.coordinates.longitude;
-    const apiKey = "7e0t14a370o3b9095a4ff16f06c1bee0";
+
     let apiUrl = `https://api.shecodes.io/weather/v1/forecast?lon=${lon}&lat=${lat}&key=${apiKey}`;
     axios.get(apiUrl).then(handleResponse);
+
+    return null;
   }
-  return null;
 }
