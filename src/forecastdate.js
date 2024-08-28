@@ -11,9 +11,16 @@ export default function Forecastdate(props) {
     return minimumtemp;
   }
 
+  function days() {
+    let day = new Date(props.forecastdata.time * 1000);
+    let date = day.getDay();
+    let days = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"];
+    return days[date];
+  }
+
   return (
     <div>
-      <div className="weatherforecast-day">Tue</div>
+      <div className="weatherforecast-day">{days()}</div>
 
       <Icon spesific={props.forecastdata.condition.icon} size={45} />
 

@@ -8,8 +8,8 @@ export default function Weatherforecast(props) {
   let [forecastdetail, setforecastdetail] = useState(null);
 
   function handleResponse(response) {
-    setForecastbeready(true);
     setforecastdetail(response.data.daily);
+    setForecastbeready(true);
   }
 
   if (forecastbeready) {
