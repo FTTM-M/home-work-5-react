@@ -1,7 +1,7 @@
 .weather {
   background: rgb(193, 229, 234);
   border: 1px rgb(193, 229, 234) solid;
-  border-radius: 40px;
+  border-radius: 70px;
   color: rgb(18, 143, 159);
   font-size: 15px;
 }
@@ -15,7 +15,7 @@
   border-radius: 30px;
 }
 form {
-  margin: 40px 60px 30px 40px;
+  margin: 40px 40px 30px 20px;
 }
 
 .search {
@@ -30,8 +30,7 @@ form {
 }
 
 .weather .whole {
-  margin-left: 50px;
-  margin-bottom: 60px;
+  margin: 0px 35px 60px 35px;
 }
 .weather .mt-5 {
   margin-top: 100px !important;
